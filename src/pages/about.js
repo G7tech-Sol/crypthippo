@@ -7,7 +7,7 @@ function Aboutus({ user }) {
     const [categoriesData, setcategoriesData] = useState([]);
     useEffect(() => {
         async function getCategories() {
-            const apiUrlEndpoint = `http://localhost:3000/api/data-lib`;
+            const apiUrlEndpoint = `https://crypthippo.vercel.com/api/data-lib`;
             const response = await fetch(apiUrlEndpoint);
             const res = await response.json();
             // console.log(res.categories);
