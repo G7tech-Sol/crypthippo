@@ -10,7 +10,7 @@ function Detail({ user }) {
     const [allLinks, setAllLinks] = useState([]);
     useEffect(() => {
         async function getTransactionDetail() {
-            const apiUrlEndpoint = `http://localhost:3000/api/transaction`;
+            const apiUrlEndpoint = `api/transaction`;
             const postData = {
                 method: "Post",
                 headers: { "Content-Type": "application/json" },
