@@ -10,15 +10,11 @@ function Detail({ user }) {
     const [allLinks, setAllLinks] = useState([]);
     useEffect(() => {
         async function getTransactionDetail() {
-            const apiUrlEndpoint = `api/transaction`;
+            const apiUrlEndpoint = `http://localhost:3000/api/transaction?id=${id}`;
             const postData = {
-                method: "Post",
-                mode: 'no-cors',
+                method: "GET",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    id: id,
-                }),
-            }
+              };
             const response = await fetch(apiUrlEndpoint, postData);
             const res = await response.json();
             setTransactionDetail(res.transactionData);
