@@ -1,6 +1,10 @@
 import { query } from "../../lib/db";
 
 export default async function handler(req, res) {
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+
     const id = req.body.id;
     try {
         const queryCategorySql = "SELECT * FROM  categories WHERE id = ? AND status = 1 AND deleted_at IS NULL "
