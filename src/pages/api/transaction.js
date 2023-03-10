@@ -3,7 +3,7 @@ import cors from 'cors';
 
 const corsMiddleware = cors({
   credentials: true,
-  origin: '*',
+  origin: 'https://cryptohippodashboard.com',
   methods: ['GET', 'OPTIONS', 'PATCH', 'DELETE', 'POST', 'PUT'],
 });
 
