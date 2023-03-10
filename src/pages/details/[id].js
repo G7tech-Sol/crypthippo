@@ -72,7 +72,7 @@ function Detail({ user }) {
                     <div className="section-1 d-flex justify-content-between">
                         <div className="d-flex flex-column flex-md-row">
                             <div className="icon_box">
-                                <img src={`../../images/${transactionDetail.image}`} alt="" className="icon" />
+                                <img src={`https://cryptohippodashboard.com/${transactionDetail.image}`} alt="" className="icon" />
                             </div>
                             <div className="contents">
                                 <h2 className="c_title">{transactionDetail.name}</h2>
