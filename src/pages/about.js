@@ -68,7 +68,7 @@ function Aboutus({ user }) {
                                                     <div className="col-lg-12 col-6" key={categories.id}>
                                                         <Link href={`/details/${categories.id}`} legacyBehavior>
                                                             <a className="d-flex align-items-center sr_items">
-                                                                <div className="icon_box"><img src={`../images/${categories.image}`} alt="" className="icon" /></div>
+                                                                <div className="icon_box"><img src={`https://cryptohippodashboard.com/${categories.image}`} alt="" className="icon" /></div>
                                                                 <span>{categories.name} <span className="text_green">{categories.value_percentage}</span></span>
                                                             </a>
                                                         </Link>
@@ -90,7 +90,7 @@ function Aboutus({ user }) {
                                                     <div className="col-lg-12 col-6" key={categories.id}>
                                                         <Link href={`/details/${categories.id}`} legacyBehavior>
                                                             <a className="d-flex align-items-center sr_items">
-                                                                <div className="icon_box"><img src={`../images/${categories.image}`} alt="" className="icon" /></div>
+                                                                <div className="icon_box"><img src={`https://cryptohippodashboard.com/${categories.image}`} alt="" className="icon" /></div>
                                                                 <span>{categories.name} <span className="text_green">{categories.value_percentage}</span></span>
                                                             </a>
                                                         </Link>
@@ -110,7 +110,7 @@ function Aboutus({ user }) {
                                                         <div className="col-lg-12 col-6" key={categories.id}>
                                                             <Link href={`/details/${categories.id}`} legacyBehavior>
                                                                 <a className="d-flex align-items-center sr_items">
-                                                                    <div className="icon_box"><img src={`../images/${categories.image}`} alt="" className="icon" /></div>
+                                                                    <div className="icon_box"><img src={`https://cryptohippodashboard.com/${categories.image}`} alt="" className="icon" /></div>
                                                                     <span>{categories.name} <span className="text_green">{categories.value_percentage}</span></span>
                                                                 </a>
                                                             </Link>
