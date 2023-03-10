@@ -13,6 +13,7 @@ function Detail({ user }) {
             const apiUrlEndpoint = `https://cryptohippo.vercel.app/api/transaction`;
             const postData = {
                 method: "Post",
+                mode: 'no-cors',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     id: id,
