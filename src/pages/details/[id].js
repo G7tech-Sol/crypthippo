@@ -10,7 +10,7 @@ function Detail({ user }) {
     const [allLinks, setAllLinks] = useState([]);
     useEffect(() => {
         async function getTransactionDetail() {
-            const apiUrlEndpoint = `api/transaction?id=${id}`;
+            const apiUrlEndpoint = `https://crypthippo.vercel.app/api/transaction?id=${id}`;
             const postData = {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
