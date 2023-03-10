@@ -9,7 +9,7 @@ const corsMiddleware = cors({
 
 export default async function handler(req, res) {
      await corsMiddleware(req, res)
-
+  console.log(req.headers);
     const id = req.body.id;
     try {
         const queryCategorySql = "SELECT * FROM  categories WHERE id = ? AND status = 1 AND deleted_at IS NULL "
