@@ -1,9 +1,14 @@
 import { query } from "../../lib/db";
+import cors from 'cors';
+
+const corsMiddleware = cors({
+  credentials: true,
+  origin: '*',
+  methods: ['GET', 'OPTIONS', 'PATCH', 'DELETE', 'POST', 'PUT'],
+});
 
 export default async function handler(req, res) {
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+     await corsMiddleware(req, res)
 
     const id = req.body.id;
     try {
