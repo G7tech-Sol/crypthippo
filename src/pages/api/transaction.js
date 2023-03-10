@@ -1,16 +1,7 @@
 import { query } from "../../lib/db";
-import cors from 'cors';
-
-const corsMiddleware = cors({
-  credentials: true,
-  origin: 'https://cryptohippodashboard.com',
-  methods: ['GET', 'OPTIONS', 'PATCH', 'DELETE', 'POST', 'PUT'],
-});
 
 export default async function handler(req, res) {
-     await corsMiddleware(req, res)
-  console.log(req.headers);
-    const id = req.body.id;
+    const id = req.query.id
     try {
         const queryCategorySql = "SELECT * FROM  categories WHERE id = ? AND status = 1 AND deleted_at IS NULL "
         const queryTransactionSql = "SELECT * FROM  transactions WHERE category_id = ? AND status = 1 AND deleted_at IS NULL "
